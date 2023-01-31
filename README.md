@@ -1,2 +1,20 @@
-# Aws-microservice-components
-This repo holds terraform and terragrunt code to provision microservice  environment by using aws services.
+# Terragrunt
+This repo creates the following resources using the terragrunt:
+
+1. VPC
+2. EKS
+3. RDS
+4. ElastiCache
+5. OpenSearch
+6. EFS
+
+# commands to create the above resources:
+Note: You need to install the latest version of terragrunt
+1. Git clone this repo to your workstation
+2. cd Infrastructure-(env)/regional/env/(env)
+3. run terragrunt run-all plan 
+4. run terragrunt run-all apply
+
+You can also create or update individual resources by going to that resource specific directory under staging on production folder and run terragrunt plan and terragrunt apply commands.
+
+All the statefiles are store in s3 bucket.
