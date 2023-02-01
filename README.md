@@ -7,7 +7,7 @@ This repository holds the code to provision following aws services which is requ
 5. OpenSearch
 6. EFS
 
-* Note: For VPC and EKS Module, we have taken reference from official terraform registry. 
+_* Note: For VPC and EKS Module, we have taken reference from official terraform registry. _
 
 
 # commands to create the above resources:
