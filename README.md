@@ -18,8 +18,9 @@ This repository holds the code to provision the following AWS services, which ar
 #### [Amazon efs](https://aws.amazon.com/efs/)
 **_Note: For VPC and EKS Module, We have taken reference from official terraform registry._**
 
+___
 We are using **Terragrunt** as IAC tool.
-The initial purpose of Terragrunt was to fill in a few gaps in Terraform’s functionality, and it has continuously expanded with new features. Although Terraform has evolved to support more advanced feature sets, it still has room for improvement. Only Terragrunt brings the following rich feature set to the table:
+The initial purpose of Terragrunt was to fill in a few gaps in Terraform’s functionality, and it has continuously expanded with new features. The main benifit Terragrunt provides is the de-coupling of terraform module along with state files.Each Services used in this solution having its own state file. Terragrunt brings the following rich feature set to the table:
 
 * Explicit dependencies: Share your state easily
 * Automatic Atlantis config generation: Eliminates toil
@@ -30,6 +31,22 @@ The initial purpose of Terragrunt was to fill in a few gaps in Terraform’s fun
 * read_terragrunt_config imports: Eliminate repeated Terragrunt code
 
 You can read more about terragrunt from here: (https://terragrunt.gruntwork.io/)
+___
+## Pre-Requisites
+* An AWS Account
+* An IAM role or User with Proper Permission to provision Requested Resources. 
+* terragrunt version v0.35.8
+* Terraform v1.2.9
+___
+
+## Execution Steps
+1. Clone the git repo.
+2. Go To Infrastructure-dev and open the terragrunt.hcl file.
+3. Provide the S3 bucket name, which holds the state files for our services
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/12654660/215960510-0c84df45-83d5-4338-bb33-aafe8f1509f3.png">
+4. Go To Infrastructure-dev/regional Folder and Open the region.hcl file.
+5. Provide the Region name, where we wants to provision our infrastructure.Make Sure S3 Bucket should also exsist into same region or if you want to have s3 bucket in a different region, change the local values in terragrunt.hcl file mentioned in step 2.
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/12654660/215961125-814c927a-ebc1-4f52-9ad3-4cfa36dbad2f.png">
 
 
 # commands to create the above resources:
