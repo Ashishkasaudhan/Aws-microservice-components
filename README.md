@@ -1,6 +1,5 @@
 # Introduction
-This repository holds the code to provision the following AWS services which are required to build an Microservices based environment. We are following 3 tier architecture approch.
-
+This repository holds the code to provision the following AWS services, which are required to build an Microservices based environment. We are following 3 tier architecture approch. 
 
 1. VPC
 2. EKS
@@ -8,6 +7,17 @@ This repository holds the code to provision the following AWS services which are
 4. ElastiCache
 5. Opensearch-Service
 6. EFS
+
+We are using **Terragrunt**__ as IAC tool.
+The initial purpose of Terragrunt was to fill in a few gaps in Terraform’s functionality, and it has continuously expanded with new features. Although Terraform has evolved to support more advanced feature sets, it still has room for improvement. Only Terragrunt brings the following rich feature set to the table:
+
+* Explicit dependencies: Share your state easily
+* Automatic Atlantis config generation: Eliminates toil
+* Environment variable support: Discourages hard-coded values
+* Generate blocks: Remove repeated Terraform
+* Automatic resource tagging: Applies metadata universally
+* Arbitrary command output from variables: Streamlines library usage
+* read_terragrunt_config imports: Eliminate repeated Terragrunt code
 
 ## Ref-Link
 #### [Amazon EKS](https://aws.amazon.com/eks/)
