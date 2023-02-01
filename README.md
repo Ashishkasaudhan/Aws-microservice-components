@@ -5,8 +5,7 @@ This repository holds the code to provision the following AWS services, which ar
 2. EKS
 3. RDS
 4. ElastiCache
-5. Opensearch-Service
-6. EFS
+5. EFS
 
 
 ## Ref-Link
@@ -14,7 +13,6 @@ This repository holds the code to provision the following AWS services, which ar
 #### [Amazon VPC](https://aws.amazon.com/vpc/)
 #### [Amazon RDS](https://aws.amazon.com/rds/)
 #### [Amazon elasticache](https://aws.amazon.com/elasticache/)
-#### [Amazon opensearch-service](https://aws.amazon.com/opensearch-service/)
 #### [Amazon efs](https://aws.amazon.com/efs/)
 **_Note: For VPC and EKS Module, We have taken reference from official terraform registry._**
 
@@ -104,9 +102,9 @@ inputs = {
 
 ```
 9. Run Terragrunt plan
-<pre><code>terragrunt plan validate</pre></code>
+<pre><code>terragrunt plan </pre></code>
 10. Run Terragrunt apply 
-<pre><code>terragrunt apply validate</pre></code>
+<pre><code>terragrunt apply </pre></code>
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/12654660/215963449-42e67acc-cef0-43cb-8e76-0c562d5c52ca.png">
 11. Wait for Vpc to get created first. 
@@ -140,7 +138,7 @@ terraform {
 }
 
 dependency "vpc" {
-  config_path = "../vpc"     
+  config_path = "../vpc"   -- We are using output from this dependency block to refer values for other variables used in this code.
 }
 
 
@@ -225,6 +223,13 @@ inputs = {
 
 
 ```
+
+15. Follow the same steps and modify the values of efs,elastic_cache,rds terragrunt.hcl file. 
+16. Once you are done with your changes, then change the directory to Infrastructure-dev/regional/env/dev.
+17. Now run terragrunt run-all plan command 
+<pre><code>terragrunt run-all plan</pre></code>
+![terragrunt-run-all](https://user-images.githubusercontent.com/12654660/215965347-0837cb38-1c20-4a62-84ff-1dc7eb50e97b.png)
+
 
 
 # commands to create the above resources:
