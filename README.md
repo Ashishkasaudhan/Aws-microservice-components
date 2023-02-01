@@ -3,7 +3,7 @@ This repository holds the code to provision the following AWS services, which ar
 1. VPC
 2. EKS
 3. RDS
-4. ElastiCache
+4. Elastic Cache
 5. EFS
 
 
