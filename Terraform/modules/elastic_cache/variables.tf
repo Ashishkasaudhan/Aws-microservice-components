@@ -14,7 +14,6 @@ variable "vpc_id" {
 }
 
 variable "allowed_cidr_blocks" {
-  default     = ["10.2.0.0/16"]
   description = "The whitelisted CIDRs which to allow `ingress` traffic to LB"
 }
 
