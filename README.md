@@ -255,7 +255,7 @@ inputs = {
 1. First run terragrunt run-all destroy --terragrunt-exclude-dir vpc from Infrastructure-dev/regional/env/dev directory, As vpc is added as dependency.
 <pre><code>terragrunt run-all destroy --terragrunt-exclude-dir vpc</pre></code>
 2. Once the destruction of all services service has been completed, then change the directory into Infrastructure-dev/regional/env/dev/vpc and run the terragrunt destroy command.
-<pre><code>terragrunt destroy --terragrunt-exclude-dir vpc</pre></code>
+<pre><code>terragrunt destroy </pre></code>
 
 ## Useful Terragrunt command 
 *  terragrunt show  will provide you the output values for respective service.
