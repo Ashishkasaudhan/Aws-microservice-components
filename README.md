@@ -1,13 +1,13 @@
 # Introduction
 This repository holds the code to provision following aws services which is required to build an Microservices based environment. We are following 3 tier architecture approch.
-1. VPC
+_1. VPC
 2. EKS
 3. RDS
 4. ElastiCache
 5. OpenSearch
-6. EFS
+6. EFS_
 
-_Note: For VPC and EKS Module, we have taken reference from official terraform registry._
+**_Note: For VPC and EKS Module, We have taken reference from official terraform registry._**
 
 
 # commands to create the above resources:
