@@ -111,7 +111,9 @@ inputs = {
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/12654660/215963449-42e67acc-cef0-43cb-8e76-0c562d5c52ca.png">
 11. Wait for Vpc to get created first. 
+
 12. After successful vpc creation, now we can provision all other resources at same time. This is a nice feauture offered by terragrunt, But before that lets create each services specific **terragrunt.hcl** file.
+
 13. Lets Modify the Infrastructure-dev/regional/env/eks terragrunt.hcl file as a reference and then you can follow the same for all other services. 
 
 
