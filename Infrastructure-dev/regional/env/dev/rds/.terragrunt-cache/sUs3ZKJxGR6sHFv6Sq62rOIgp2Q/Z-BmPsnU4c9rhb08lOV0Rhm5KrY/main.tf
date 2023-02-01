@@ -36,7 +36,7 @@ resource "aws_security_group" "rds" {
 }
 
 
-resource "aws_db_instance" "devops" {
+resource "aws_db_instance" "onehub" {
   identifier             = var.db_indentifier
   instance_class         = var.rds_instance_type
   allocated_storage      = var.storage_in_db
