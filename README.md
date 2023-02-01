@@ -53,6 +53,7 @@ ____
 7. Provide the environment name, which is nothing but a variable used in resource creation. You can leverage these file to use more common variable as per your use case.
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/12654660/215961896-f47e40b9-1223-469a-9bca-152fba520c10.png">
 8. Now go to Infrastructure-dev/regional/env/vpc Folder and Open the terragrunt.hcl file and provide/replace the values accordingly.
+
 **_Note: Vpc is required for all the services which we are creating, so we provision vpc first. There are ways to provision all resource at same time but we are not covering that use case. Image mentioned below will explain you about vpc dependencies_**
 
 ![terrragrunt-graph-dependency](https://user-images.githubusercontent.com/12654660/215965999-3e055a47-d071-4528-8626-3d15349ea489.png)
