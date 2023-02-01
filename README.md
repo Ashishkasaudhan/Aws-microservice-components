@@ -252,5 +252,6 @@ inputs = {
 <pre><code>terragrunt destroy --terragrunt-exclude-dir vpc</pre></code>
 
 ## Useful Terragrunt command 
-1- _terragrunt show _ will provide you the output values for respective service.
-2- terragrunt graph-dependencies  will provide your the dependencies graph. 
+*  terragrunt show  will provide you the output values for respective service.
+
+*  terragrunt graph-dependencies  will provide dependencies graph between terragrunt modules. 
