@@ -1,6 +1,5 @@
 # Introduction
-This repository holds the code to provision the following AWS services, which are required to build an Microservices based environment. We are following 3 tier architecture approch. 
-
+This repository holds the code to provision the following AWS services, which are required to build an Microservices based environment. 
 1. VPC
 2. EKS
 3. RDS
