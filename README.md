@@ -58,6 +58,7 @@ ____
 8. Now go to Infrastructure-dev/regional/env/vpc Folder and Open the terragrunt.hcl file and provide/replace the values accordingly.
 **_Note: Vpc is required for all the services which we are creating, so we provision vpc first. There are ways to provision all resource at same time but we are not covering that use case._**
 
+
 ```
 include {
     path = find_in_parent_folders()
@@ -135,7 +136,7 @@ terraform {
 }
 
 dependency "vpc" {
-  config_path = "../vpc"     -------> **On this section, we are extracting values from vpc, which you can getting used in vpc_id,vpc_cidr_blocks,subnet_ids,vpc_security_group_ids.**
+  config_path = "../vpc"     
 }
 
 
