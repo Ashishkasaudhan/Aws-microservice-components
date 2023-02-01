@@ -49,6 +49,7 @@ ____
 4. Go To Infrastructure-dev/regional Folder and Open the region.hcl file.
 
 5. Provide the Region name, where we wants to provision our infrastructure.Make Sure S3 Bucket should also exsist into same region or if you want to have s3 bucket in a different region, change the local values in terragrunt.hcl file mentioned in step 2.
+
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215961125-814c927a-ebc1-4f52-9ad3-4cfa36dbad2f.png">
 
 6. Go To Infrastructure-dev/regional/env Folder and Open the env.hcl file.
