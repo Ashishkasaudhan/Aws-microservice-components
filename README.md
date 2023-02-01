@@ -8,7 +8,17 @@ This repository holds the code to provision the following AWS services, which ar
 5. Opensearch-Service
 6. EFS
 
-We are using **Terragrunt**__ as IAC tool.
+
+## Ref-Link
+#### [Amazon EKS](https://aws.amazon.com/eks/)
+#### [Amazon VPC](https://aws.amazon.com/vpc/)
+#### [Amazon RDS](https://aws.amazon.com/rds/)
+#### [Amazon elasticache](https://aws.amazon.com/elasticache/)
+#### [Amazon opensearch-service](https://aws.amazon.com/opensearch-service/)
+#### [Amazon efs](https://aws.amazon.com/efs/)
+**_Note: For VPC and EKS Module, We have taken reference from official terraform registry._**
+
+We are using **Terragrunt** as IAC tool.
 The initial purpose of Terragrunt was to fill in a few gaps in Terraform’s functionality, and it has continuously expanded with new features. Although Terraform has evolved to support more advanced feature sets, it still has room for improvement. Only Terragrunt brings the following rich feature set to the table:
 
 * Explicit dependencies: Share your state easily
@@ -19,14 +29,7 @@ The initial purpose of Terragrunt was to fill in a few gaps in Terraform’s fun
 * Arbitrary command output from variables: Streamlines library usage
 * read_terragrunt_config imports: Eliminate repeated Terragrunt code
 
-## Ref-Link
-#### [Amazon EKS](https://aws.amazon.com/eks/)
-#### [Amazon VPC](https://aws.amazon.com/vpc/)
-#### [Amazon RDS](https://aws.amazon.com/rds/)
-#### [Amazon elasticache](https://aws.amazon.com/elasticache/)
-#### [Amazon opensearch-service](https://aws.amazon.com/opensearch-service/)
-#### [Amazon efs](https://aws.amazon.com/efs/)
-**_Note: For VPC and EKS Module, We have taken reference from official terraform registry._**
+You can read more about terragrunt from here: (https://terragrunt.gruntwork.io/)
 
 
 # commands to create the above resources:
