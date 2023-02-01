@@ -1,12 +1,14 @@
-# Terragrunt
-This repo creates the following resources using the terragrunt:
-
+# Introduction
+This repository holds the code to provision following aws services which is required to build an Microservices based environment. We are following 3 tier architecture approch.
 1. VPC
 2. EKS
 3. RDS
 4. ElastiCache
 5. OpenSearch
 6. EFS
+
+* Note: For VPC and EKS Module, we have taken reference from official terraform registry. 
+
 
 # commands to create the above resources:
 Note: You need to install the latest version of terragrunt
