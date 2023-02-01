@@ -46,6 +46,7 @@ ____
 2. Go To Infrastructure-dev and open the terragrunt.hcl file.
 3. Provide the S3 bucket name, which holds the state files for our services
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215960510-0c84df45-83d5-4338-bb33-aafe8f1509f3.png">
+
 4. Go To Infrastructure-dev/regional Folder and Open the region.hcl file.
 
 5. Provide the Region name, where we wants to provision our infrastructure.Make Sure S3 Bucket should also exsist into same region or if you want to have s3 bucket in a different region, change the local values in terragrunt.hcl file mentioned in step 2.
