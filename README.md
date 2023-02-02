@@ -1,10 +1,10 @@
 # Introduction
 This repository holds the code to provision the following AWS services, which are required to build an Microservices based environment. 
 1. VPC
-2. EKS
+2. EKS (Kubernetes Engine)
 3. RDS
-4. Elastic Cache
-5. EFS
+4. Elastic Cache 
+5. EFS ( As An StorageClass)
 
 
 ## Ref-Link
