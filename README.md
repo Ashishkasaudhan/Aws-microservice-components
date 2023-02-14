@@ -1,6 +1,7 @@
 # Introduction
 This repository holds the code to provision the following AWS services, which are required to build an Microservices based environment. 
-Architecture Reference 
+
+## Architecture Reference 
 
 ![aws-eks](https://user-images.githubusercontent.com/12654660/218721618-56215f83-7089-4208-9c8c-797982bd0a6d.jpg)
 
