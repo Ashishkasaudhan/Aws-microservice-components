@@ -2,7 +2,7 @@
 This repository holds the code to provision the following AWS services, which are required to build an Microservices based environment. 
 Architecture Reference 
 
-![aws-eks](https://user-images.githubusercontent.com/12654660/218720873-8964cf02-b1a7-4ba4-93fc-ca5344a888ee.jpg)
+![aws-eks](https://user-images.githubusercontent.com/12654660/218721618-56215f83-7089-4208-9c8c-797982bd0a6d.jpg)
 
 1. VPC
 2. EKS (Kubernetes Engine)
