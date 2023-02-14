@@ -45,7 +45,7 @@ ____
 1. Clone the git repo.
 2. Go To Infrastructure-dev and open the terragrunt.hcl file.
 3. Provide the S3 bucket name, which holds the state files for our services
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215960510-0c84df45-83d5-4338-bb33-aafe8f1509f3.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215960510-0c84df45-83d5-4338-bb33-aafe8f1509f3.png">
 
 4. Go To Infrastructure-dev/regional Folder and Open the region.hcl file.
 
@@ -56,7 +56,7 @@ ____
 6. Go To Infrastructure-dev/regional/env Folder and Open the env.hcl file.
 
 7. Provide the environment name, which is nothing but a variable used in resource creation. You can leverage these file to use more common variable as per your use case.
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215961896-f47e40b9-1223-469a-9bca-152fba520c10.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215961896-f47e40b9-1223-469a-9bca-152fba520c10.png">
 
 8. Now go to Infrastructure-dev/regional/env/vpc Folder and Open the terragrunt.hcl file and provide/replace the values accordingly.
 
