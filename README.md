@@ -121,7 +121,7 @@ inputs = {
 12. After successful vpc creation, now we can provision all other resources at same time. This is a nice feature offered by terragrunt, but before that lets create each service specific **terragrunt.hcl** file.
 
 13. Let’s Modify the Infrastructure-dev/regional/env/eks terragrunt.hcl file which is going to create an EKS cluster.
-    Go inside Infrastructure-dev/regional/env/eks and change the values under locals and input section as per your environment. 
+    **Go inside Infrastructure-dev/regional/env/eks and change the values under locals and input section as per your environment.** 
 
 
 ```
@@ -234,7 +234,7 @@ inputs = {
 
 ```
 
-14. Follow the steps mentioned in step 13 and modify the input and locals values in terragrunt.hcl for efs, elastic_cache, rds services folders . 
+14. **Follow the steps mentioned in step 13 and modify the input and locals values in terragrunt.hcl for efs, elastic_cache, rds services folders . **
 15. Once you are done with your changes, then change the directory to Infrastructure-dev/regional/env/dev.
 16. Now run terragrunt run-all plan command 
 <pre><code>terragrunt run-all plan</pre></code>
