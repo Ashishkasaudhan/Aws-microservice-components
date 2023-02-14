@@ -234,7 +234,7 @@ inputs = {
 
 ```
 
-14. **Follow the steps mentioned in step 13 and modify the input and locals values in terragrunt.hcl for efs, elastic_cache, rds services folders . **
+14. Follow the steps mentioned in step 13 and modify the input and locals values in terragrunt.hcl for efs, elastic_cache, rds services folders.
 15. Once you are done with your changes, then change the directory to Infrastructure-dev/regional/env/dev.
 16. Now run terragrunt run-all plan command 
 <pre><code>terragrunt run-all plan</pre></code>
