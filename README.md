@@ -4,7 +4,7 @@ This repository holds the code to provision the following AWS services, which ar
 2. EKS (Kubernetes Engine)
 3. RDS
 4. Elastic Cache 
-5. EFS ( As An StorageClass)
+5. EFS ( As An Storage Class)
 
 
 ## Ref-Link
@@ -17,7 +17,7 @@ This repository holds the code to provision the following AWS services, which ar
 
 ___
 We are using **Terragrunt** as IAC tool.
-The initial purpose of Terragrunt was to fill in a few gaps in Terraform’s functionality, and it has continuously expanded with new features. The main benifit Terragrunt provides is the de-coupling of terraform module along with state files.Each Services used in this solution having its own state file. Terragrunt brings the following rich feature set to the table:
+The initial purpose of Terragrunt was to fill in a few gaps in Terraform’s functionality, and it has continuously expanded with new features. The main benefit Terragrunt provides is the de-coupling of terraform module along with state files. Each Services used in this solution having its own state file. Terragrunt brings the following rich feature set to the table:
 
 * Explicit dependencies: Share your state easily
 * Automatic Atlantis config generation: Eliminates toil
@@ -43,7 +43,7 @@ ____
 ____
 ## Execution Steps
 1. Clone the git repo.
-2. Go To Infrastructure-dev and open the terragrunt.hcl file.
+2. Go to Infrastructure-dev and open the terragrunt.hcl file.
 3. Provide the S3 bucket name, which holds the state files for our services
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215960510-0c84df45-83d5-4338-bb33-aafe8f1509f3.png">
 
@@ -53,9 +53,9 @@ ____
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215961125-814c927a-ebc1-4f52-9ad3-4cfa36dbad2f.png">
 
-6. Go To Infrastructure-dev/regional/env Folder and Open the env.hcl file.
+6. Go to Infrastructure-dev/regional/env Folder and Open the env.hcl file.
 
-7. Provide the environment name, which is nothing but a variable used in resource creation. You can leverage these file to use more common variable as per your use case.
+7. Provide the environment name, which is nothing but a variable used in resource creation. You can leverage these files to use more common variable as per your use case.
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215961896-f47e40b9-1223-469a-9bca-152fba520c10.png">
 
 8. Now go to Infrastructure-dev/regional/env/vpc Folder and Open the terragrunt.hcl file and provide/replace the values accordingly.
@@ -118,9 +118,9 @@ inputs = {
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215963449-42e67acc-cef0-43cb-8e76-0c562d5c52ca.png">
 11. Wait for Vpc to get created first. 
 
-12. After successful vpc creation, now we can provision all other resources at same time. This is a nice feauture offered by terragrunt, But before that lets create each services specific **terragrunt.hcl** file.
+12. After successful vpc creation, now we can provision all other resources at same time. This is a nice feature offered by terragrunt, but before that lets create each service specific **terragrunt.hcl** file.
 
-13. Lets Modify the Infrastructure-dev/regional/env/eks terragrunt.hcl file as a reference and then you can follow the same for all other services. 
+13. Let’s Modify the Infrastructure-dev/regional/env/eks terragrunt.hcl file as a reference and then you can follow the same for all other services. 
 
 
 ```
@@ -233,7 +233,7 @@ inputs = {
 
 ```
 
-14. Follow the same steps and modify the values of efs,elastic_cache,rds terragrunt.hcl file. 
+14. Follow the same steps and modify the values of efs, elastic_cache, rds terragrunt.hcl file. 
 15. Once you are done with your changes, then change the directory to Infrastructure-dev/regional/env/dev.
 16. Now run terragrunt run-all plan command 
 <pre><code>terragrunt run-all plan</pre></code>
@@ -247,17 +247,17 @@ inputs = {
 ![terragrunt-cluster-creation](https://user-images.githubusercontent.com/12654660/215965768-dbebeba0-b631-4b6c-9993-e374abed9c2a.png)
 ![eks-node-group](https://user-images.githubusercontent.com/12654660/215965778-2fcd07ab-0bee-4a47-adb3-a234de6883da.png)
 
-19. After sucessful execution of terragrunt run-all apply command, Our state files for each service will be present on s3 bucket similar to this.
+19. After sucessful execution of terragrunt run-all apply command, our state files for each service will be present on s3 bucket similar to this.
 ![terrragrunt-s3](https://user-images.githubusercontent.com/12654660/215966231-af6326b8-1510-4895-b149-616842c59fde.png)
 
 
 ## Cleanup
-1. First run terragrunt run-all destroy --terragrunt-exclude-dir vpc from Infrastructure-dev/regional/env/dev directory, As vpc is added as dependency.
+1. First run terragrunt run-all destroy --terragrunt-exclude-dir vpc from Infrastructure-dev/regional/env/dev directory, as vpc is added as dependency.
 <pre><code>terragrunt run-all destroy --terragrunt-exclude-dir vpc</pre></code>
 2. Once the destruction of all services service has been completed, then change the directory into Infrastructure-dev/regional/env/dev/vpc and run the terragrunt destroy command.
 <pre><code>terragrunt destroy </pre></code>
 
 ## Useful Terragrunt command 
-*  terragrunt show  will provide you the output values for respective service.
+*  terragrunt show will provide you the output values for respective service.
 
-*  terragrunt graph-dependencies  will provide dependencies graph between terragrunt modules. 
+*  terragrunt graph-dependencies will provide dependencies graph between terragrunt modules.
