@@ -38,25 +38,25 @@ ____
 
 ## Terragrunt File Structure
 
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/12654660/215961433-c23fce85-e272-4773-aaa9-1de182ec98a0.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215961433-c23fce85-e272-4773-aaa9-1de182ec98a0.png">
 
 ____
 ## Execution Steps
 1. Clone the git repo.
 2. Go To Infrastructure-dev and open the terragrunt.hcl file.
 3. Provide the S3 bucket name, which holds the state files for our services
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215960510-0c84df45-83d5-4338-bb33-aafe8f1509f3.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215960510-0c84df45-83d5-4338-bb33-aafe8f1509f3.png">
 
 4. Go To Infrastructure-dev/regional Folder and Open the region.hcl file.
 
 5. Provide the Region name, where we wants to provision our infrastructure.Make Sure S3 Bucket should also exsist into same region or if you want to have s3 bucket in a different region, change the local values in terragrunt.hcl file mentioned in step 2.
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215961125-814c927a-ebc1-4f52-9ad3-4cfa36dbad2f.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215961125-814c927a-ebc1-4f52-9ad3-4cfa36dbad2f.png">
 
 6. Go To Infrastructure-dev/regional/env Folder and Open the env.hcl file.
 
 7. Provide the environment name, which is nothing but a variable used in resource creation. You can leverage these file to use more common variable as per your use case.
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/12654660/215961896-f47e40b9-1223-469a-9bca-152fba520c10.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215961896-f47e40b9-1223-469a-9bca-152fba520c10.png">
 
 8. Now go to Infrastructure-dev/regional/env/vpc Folder and Open the terragrunt.hcl file and provide/replace the values accordingly.
 
@@ -115,7 +115,7 @@ inputs = {
 10. Run Terragrunt apply 
 <pre><code>terragrunt apply </pre></code>
 
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/12654660/215963449-42e67acc-cef0-43cb-8e76-0c562d5c52ca.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/12654660/215963449-42e67acc-cef0-43cb-8e76-0c562d5c52ca.png">
 11. Wait for Vpc to get created first. 
 
 12. After successful vpc creation, now we can provision all other resources at same time. This is a nice feauture offered by terragrunt, But before that lets create each services specific **terragrunt.hcl** file.
